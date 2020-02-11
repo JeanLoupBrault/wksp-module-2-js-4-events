@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: yellow;
+            height: 600px;
+            width: auto;
+        }
+        .start {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+        }
+        
+        .countdown-time-text {
+            color: blue;
+            font-family: 'Comic Sans', cursive, sans-serif;
+            font-size: 16px;
+            position: relative;
+            left: 24px;
+            top: 24px;
+        }
+        button {
+            height: 100px;
+            width: 100px;
+            background: #990000;
+            color: white;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 32px;
+            border: none;
+            border-radius: 50%;
+            box-shadow: none;
+            margin: 1px;
+            position: absolute;
+        }
+        .green {
+            background: #005900;
+        }
+        .red {
+            background: #990000;
+        }
+    </style>
+</head>
+<body>
+    <div class="main" id="main"></div>
+    <div class="start" id="start">
+        <button onclick="style.visibility='hidden'">Start</button>
+    </div>
+    <div>        
+        <p class="countdown-time-text">You have <span id="timer"></span> seconds to click on every button. You will hear a sound if you succeed!</p>
+            <div id="timer">
+                <span src="win.mp3"></span>
+            </div>
+            <div class="you-win">Win or lose message: <span id="you-win"></span></div>
+    </div>   
+    <script src="app.js"></script>
+</body>
+
+</html>

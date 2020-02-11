@@ -99,7 +99,14 @@ All DOM nodes have methods we can use to _notify_ us of an event.
 
 ```js
 // Example
-
+const button = document.getElementById('btn');
+function handleOuch = function() {
+    console.log('ouch!');
+    }
+    // add it
+    button.addEventListener('click', handleOuch());
+    // remove it
+    button.removeEventListener('click', handleOuch);
 ```
 
 ---
@@ -130,7 +137,7 @@ You can prevent the _default_ action from happening by calling `event.preventDef
 
 ---
     
-### target
+### target // (SUPER IMPORTANT !!!)
 
 - The  `target` property refers to the node where they originated. (example)
 - With an `input`, use `event.target.value` to read what was entered into an `input`.
